@@ -2,7 +2,7 @@
 
 require_once 'src/Vehicle.php';
 
-class Truck extends Vehicle
+final class Truck extends Vehicle
 {
   private string $energy;
   public const ALLOWED_ENERGIES = [

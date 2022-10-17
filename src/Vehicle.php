@@ -1,7 +1,9 @@
 <?php
 
-class Vehicle
+abstract class Vehicle
 {
+
+  private static $vehicleCounter = 0;
 
   protected string $color;
 
@@ -13,9 +15,16 @@ class Vehicle
 
   public function __construct(string $color, int $nbSeats)
   {
+    self::$vehicleCounter++;
     $this->color = $color;
     $this->nbSeats = $nbSeats;
   }
+
+  public static function count(): int
+   {
+       return self::$vehicleCounter;
+   }
+
 
   public function start(): string
   {

@@ -2,7 +2,7 @@
 
 require_once 'src/Vehicle.php';
 
-class Car extends Vehicle
+final class Car extends Vehicle
 {
     private string $energy;
 
